@@ -1,149 +1,193 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.5;
-    color: #333;
+    color: #212529;
     text-align: left;
-    background-color: #f9f9f9;
-}
-
-.header {
-    padding: 40px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-}
-
-.header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-.navbar a {
-    display: inline-block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
 }
 
-form {
-    flex: 0 0 45%;
-    text-align: center;
-    padding: 10px;
+[tabindex="-1"]:focus {
+    outline: 0 !important;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+abbr[data-original-title],
+abbr[title] {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+dfn {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    -ms-overflow-style: scrollbar;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    text-align: inherit;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.result {
-    flex: 0 0 45%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-body {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    text-align: left;
-    background-color: #f9f9f9;
-}
-
-.header {
-    padding: 40px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-}
-
-.header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-.navbar a {
-    display: inline-block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-    background-color: #555;
-    color: #fff;
+    padding: 0;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -151,10 +195,17 @@ body {
     border-radius: 5px;
 }
 
-form {
-    flex: 0 0 45%;
+h1 {
     text-align: center;
-    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 label {
@@ -163,33 +214,56 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"],
-select {
+input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
+button[type="submit"] {
     border-radius: 5px;
     background-color: #007bff;
-    color: white;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.result {
-    flex: 0 0 45%;
-    padding: 10px;
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.result-box {
+    flex: calc(50% - 10px);
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+.result-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.result-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    margin-bottom: 10px;
 }
