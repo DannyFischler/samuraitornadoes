@@ -4,20 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Meal Generator</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <title>Meal Search App</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Random Meal Generator</h1>
-        <button id="generateBtn">Generate Random Meal</button>
-        <div class="meal" id="mealInfo">
-            <h2 id="mealName"></h2>
-            <img id="mealImage" src="" alt="">
-            <p id="mealCategory"></p>
-            <p id="mealInstructions"></p>
-        </div>
+        <h1>Meal Search App</h1>
+        <form id="searchForm">
+            <label for="ingredient">Search by Ingredient:</label>
+            <input type="text" id="ingredient" placeholder="Enter ingredient...">
+            <button type="submit">Search</button>
+        </form>
+        <p>Available Ingredients: Chicken, Beef, Pork, Fish, Eggs, Rice, Pasta, Tomato, Onion, Garlic, Potato, Carrot,
+            Bell Pepper, Broccoli, Spinach</p>
+        <div id="mealsList"></div>
+        <div id="mealDetails"></div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
