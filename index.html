@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Meal Search App</title>
+    <title>Meal and Drink Search App</title>
 </head>
 
 <body>
@@ -13,35 +13,39 @@
         <h1>Tornado Recipe Picker</h1>
         <p>A website created by the Samurai Tornadoes.</p>
     </div>
-    <nav>
-        <div class="navbar">
-            <a href="https://kristineskitchenblog.com/ground-beef-tacos/">Amanda</a>
-
-            <a href="https://www.aspicyperspective.com/best-hamburger-patty-recipe/">Hector</a>
-
-            <a href="https://www.tastingtable.com/736524/simple-baked-escargot-recipe/">Daniel</a>
+    <nav class="navbar">
+        <a href="https://kristineskitchenblog.com/ground-beef-tacos/">Amanda</a>
+        <a href="https://www.aspicyperspective.com/best-hamburger-patty-recipe/">Hector</a>
+        <a href="https://www.tastingtable.com/736524/simple-baked-escargot-recipe/">Daniel</a>
     </nav>
-    </div>
     <div class="container">
-        <h1>Meal Search App</h1>
-        <form id="searchForm">
-            <label for="ingredient">Search by Ingredient:</label>
-            <input type="text" id="ingredient" placeholder="Enter ingredient...">
-            <button type="submit">Search</button>
-        </form>
-        <p>Available Ingredients: Chicken, Beef, Pork, Fish, Eggs, Rice, Pasta, Tomato, Onion, Garlic, Potato, Carrot,
-            Bell Pepper, Broccoli, Spinach</p>
-        <div id="mealsList"></div>
-        <div id="mealDetails"></div>
+        <div class="generator">
+            <h2>Meal Search</h2>
+            <form id="mealSearchForm">
+                <label for="ingredient">Search by Ingredient:</label>
+                <input type="text" id="ingredient" placeholder="Enter ingredient...">
+                <button type="submit">Search Meals</button>
+            </form>
+            <p>Available Ingredients: Chicken, Beef, Pork, Fish, Eggs, Rice, Pasta, Tomato, Onion, Garlic, Potato,
+                Carrot,
+                Bell Pepper, Broccoli, Spinach</p>
+            <div id="mealList" class="result"></div>
+            <div id="mealDetails" class="result"></div>
+        </div>
+        <div class="generator">
+            <h2>Drink Search</h2>
+            <form id="drinkSearchForm">
+                <label for="drinkType">Search by type of drink:</label>
+                <input type="text" id="drinkType" placeholder="Enter type of drink...">
+                <button type="submit">Search Drinks</button>
+            </form>
+            <p>Types of drinks: Ordinary Drink, Cocktail, Beer, Shot, Other</p>
+            <div id="drinkList" class="result"></div>
+            <div id="drinkDetails" class="result"></div>
+        </div>
     </div>
-    <script src="assets/js/script.js"></script>
-
-
-
-
-
-
-
+    <script src="assets/js/foodscript.js"></script>
+    <script src="assets/js/drinkscript.js"></script>
 </body>
 
 </html>
