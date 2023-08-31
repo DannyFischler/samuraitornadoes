@@ -3,6 +3,11 @@ const ingredientInput = document.getElementById("ingredient");
 const mealsList = document.getElementById("mealsList");
 const mealDetails = document.getElementById("mealDetails");
 
+const drinkInput = document.getElementById("drinkType");
+const drinksList = document.getElementById("drinksList");
+const drinkDetails = document.getElementById("drinkDetails");
+
+
 searchForm.addEventListener("submit", event => {
     event.preventDefault();
     const ingredient = ingredientInput.value.trim();
@@ -10,6 +15,7 @@ searchForm.addEventListener("submit", event => {
         searchMealsByIngredient(ingredient);
     }
 });
+
 
 async function searchMealsByIngredient(ingredient) {
     try {
@@ -29,7 +35,6 @@ async function searchMealsByIngredient(ingredient) {
         mealsList.innerHTML = "<p>Error fetching meals.</p>";
     }
 }
-
 async function fetchMealById(mealId) {
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);
@@ -51,3 +56,54 @@ async function fetchMealById(mealId) {
         mealDetails.innerHTML = "<p>Error fetching meal details.</p>";
     }
 }
+searchForm.addEventListener("submit", event => {
+    event.preventDefault();
+    const drinkType = drinkType.value.trim();
+    if (drinkType !== "") {
+        searchDrinksByType(drinkType);
+    }
+});
+
+async function searchDrinksByType(drinkType) {
+    try {
+        const response = await fetch(`www.thecocktaildb.com/api/json/v1/1/filter.php?c=${drinkType}`);
+        const data = await response.json();
+        const drinks = data.drinks;
+
+        if (drinks) {
+            const randomIndex = Math.floor(Math.random() * drinks.length);
+            const randomDrinkId = drinks[randomIndex].idDrink;
+            fetchDrinkById(randomDrinkId);
+        } else {
+            drinksList.innerHTML = "<p>No drinks found.</p>";
+        }
+    } catch (error) {
+        console.error("Error fetching drinks:", error);
+        drinksList.innerHTML = "<p>Error fetching drinks.</p>";
+    }
+}
+
+async function fetchDrinkById(drinkId) {
+    try {
+        const response = await fetch(`http://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552${drinkId}`);
+        const data = await response.json();
+        const drink = data.drinks[0];
+
+        if (drink) {
+            drinkDetails.innerHTML = `
+        <h2>${drink.strDrink}</h2>
+        <img src="${drink.strDrinkThumb}" alt="${drink.strMeal}">
+        <p>Category: ${drink.strCategory}</p>
+        <p>Instructions: ${drink.strInstructions}</p>
+      `;
+        } else {
+            drinkDetails.innerHTML = "<p>Drink details not found.</p>";
+        }
+    } catch (error) {
+        console.error("Error fetching drink details:", error);
+        drinkDetails.innerHTML = "<p>Error fetching drink details.</p>";
+    }
+}
+
+
+
