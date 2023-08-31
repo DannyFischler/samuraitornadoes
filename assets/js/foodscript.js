@@ -18,6 +18,7 @@ async function searchMealsByIngredient(ingredient) {
         const meals = data.meals;
 
         if (meals) {
+            mealsList.innerHTML = ""; // Clear the message
             const randomIndex = Math.floor(Math.random() * meals.length);
             const randomMealId = meals[randomIndex].idMeal;
             fetchMealById(randomMealId);
@@ -29,6 +30,7 @@ async function searchMealsByIngredient(ingredient) {
         mealsList.innerHTML = "<p>Error fetching meals.</p>";
     }
 }
+
 
 async function fetchMealById(mealId) {
     try {
@@ -52,56 +54,3 @@ async function fetchMealById(mealId) {
     }
 }
 
-const drinkSearchForm = document.getElementById("drinkSearchForm");
-const drinkTypeInput = document.getElementById("drinkType");
-const drinkList = document.getElementById("drinkList");
-const drinkDetails = document.getElementById("drinkDetails");
-
-drinkSearchForm.addEventListener("submit", event => {
-    event.preventDefault();
-    const drinkType = drinkTypeInput.value.trim();
-    if (drinkType !== "") {
-        searchDrinksByType(drinkType);
-    }
-});
-
-async function searchDrinksByType(drinkType) {
-    try {
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${drinkType}`);
-        const data = await response.json();
-        const drinks = data.drinks;
-
-        if (drinks) {
-            const randomIndex = Math.floor(Math.random() * drinks.length);
-            const randomDrinkId = drinks[randomIndex].idDrink;
-            fetchDrinkById(randomDrinkId);
-        } else {
-            drinkList.innerHTML = "<p>No drinks found.</p>";
-        }
-    } catch (error) {
-        console.error("Error fetching drinks:", error);
-        drinkList.innerHTML = "<p>Error fetching drinks.</p>";
-    }
-}
-
-async function fetchDrinkById(drinkId) {
-    try {
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`);
-        const data = await response.json();
-        const drink = data.drinks[0];
-
-        if (drink) {
-            drinkDetails.innerHTML = `
-        <h2>${drink.strDrink}</h2>
-        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" style="width: 150px;">
-        <p>Category: ${drink.strCategory}</p>
-        <p>Instructions: ${drink.strInstructions}</p>
-      `;
-        } else {
-            drinkDetails.innerHTML = "<p>Drink details not found.</p>";
-        }
-    } catch (error) {
-        console.error("Error fetching drink details:", error);
-        drinkDetails.innerHTML = "<p>Error fetching drink details.</p>";
-    }
-}
