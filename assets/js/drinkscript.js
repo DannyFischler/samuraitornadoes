@@ -37,10 +37,19 @@ async function fetchDrinkById(drinkId) {
         const drink = data.drinks[0];
 
         if (drink) {
+            let ingredients = [];
+
+            for (let i = 1; i <= 15; i++) { // The API has up to 15 ingredients (strIngredient1, ..., strIngredient15)
+                if (drink[`strIngredient${i}`] && drink[`strIngredient${i}`].trim() !== "") {
+                    ingredients.push(`${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`] || ''}`.trim());
+                }
+            }
+
             drinkDetails.innerHTML = `
         <h2>${drink.strDrink}</h2>
         <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
         <p>Category: ${drink.strCategory}</p>
+        <p>Ingredients: ${ingredients.join(", ")}</p>
         <p>Instructions: ${drink.strInstructions}</p>
       `;
         } else {

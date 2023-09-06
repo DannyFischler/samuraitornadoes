@@ -39,12 +39,23 @@ async function fetchMealById(mealId) {
         const meal = data.meals[0];
 
         if (meal) {
+            let ingredients = [];
+
+            // Gather ingredients
+            for (let i = 1; i <= 20; i++) {
+                // The API has up to 20 ingredients (strIngredient1, ..., strIngredient20)
+                if (meal[`strIngredient${i}`] && meal[`strIngredient${i}`].trim() !== "") {
+                    ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`] || ''}`.trim());
+                }
+            }
+
             mealDetails.innerHTML = `
-        <h2>${meal.strMeal}</h2>
-        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" style="width: 150px;">
-        <p>Category: ${meal.strCategory}</p>
-        <p>Instructions: ${meal.strInstructions}</p>
-      `;
+                <h2>${meal.strMeal}</h2>
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" style="width: 150px;">
+                <p>Category: ${meal.strCategory}</p>
+                <p>Ingredients: ${ingredients.join(", ")}</p>
+                <p>Instructions: ${meal.strInstructions}</p>
+            `;
         } else {
             mealDetails.innerHTML = "<p>Meal details not found.</p>";
         }
@@ -53,4 +64,3 @@ async function fetchMealById(mealId) {
         mealDetails.innerHTML = "<p>Error fetching meal details.</p>";
     }
 }
-
