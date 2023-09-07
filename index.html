@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/averia-serif-libre">
+                
     <title>Meal and Drink Search App</title>
 </head>
-<h1 class="is-size-2 has-text-success">
+
+<img src="photos/logo.jpeg" alt="logo" style="width:350px;height:150px;">
+<h1 class="is-size-2">
     <bold> Tornado Recipe Picker </bold>
 </h1>
+
+<h2 class="is-black is-size-6">
+<bold>A website created by the Samurai Tornadoes</bold>
+</h2>
 <style>
+
     .navbar {
         margin-top: 20px;
         padding: 10px;
@@ -28,7 +37,7 @@
     <nav class="navbar is-danger">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://github.com/DannyFischler/samuraitornadoes">
-                <img src="github.png">
+                <img src="photos/github.png">
             </a>
             <div class="navbar-burger" data-target="navBackgroundDemo1">
                 <span></span>
@@ -67,45 +76,36 @@
                     </div>
                 </div>
             </div>
-
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-dark">
-                            <strong> A website created by the Samurai Tornados.</strong>
                         </a>
                     </div>
                 </div>
             </div>
 
 
-
-
-
-
-
     </nav>
     <div class="container">
         <div class="generator">
-            <h2>Meal Search</h2>
+            <h3 class="is-danger is-size-4"> 
+                <bold>Meal Search</bold>
+            </h3>
             <form id="mealSearchForm">
-                <label for="ingredient">Search by Ingredient:</label>
-                <input type="text" id="ingredient" placeholder="Enter ingredient...">
+                <input type="text" id="ingredient" placeholder="Search by Ingredient">
                 <div class="buttons">
-                    <button class="button is-info is-outlined">Search Meals</button>
+                    <button class="button is-danger is-outlined">I'm hungry!</button>
             </form>
 
             <div id="mealList" class="result"></div>
             <div id="mealDetails" class="result"></div>
         </div>
         <div class="generator">
-            <h2>Drink Search</h2>
+            <h3 class="is-danger is-size-4">
+            <bold>Drink Search</bold>
+            </h3>
+
             <form id="drinkSearchForm">
-                <label for="drinkType">What would you like to drink? Ordinary Drink, Cocktail, Beer, or
-                    Shot?</label>
-                <input type="text" id="drinkType" placeholder="Enter type of drink...">
+                <input type="text" id="drinkType" placeholder="What would you like to drink? Ordinary Drink, Cocktail, Beer, or Shot?">
                 <div class="buttons">
-                    <button class="button is-primary is-outlined">Search Drinks</button>
+                    <button class="button is-danger is-outlined">I'm thirsty!</button>
 
                 </div>
             </form>
