@@ -12,13 +12,65 @@
 <body>
     <div class="header">
         <h1 class="title">Tornado Recipe Picker</h1>
-        <h2 class="subtitle">A website created by the Samurai Tornadoes</h2>
-        
+
+
     </div>
-    <nav class="navbar">
-        <a href="https://kristineskitchenblog.com/ground-beef-tacos/">Amanda</a>
-        <a href="https://www.aspicyperspective.com/best-hamburger-patty-recipe/">Hector</a>
-        <a href="https://www.tastingtable.com/736524/simple-baked-escargot-recipe/">Daniel</a>
+    <nav class="navbar" role="navigation" aria-lable="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://github.com/DannyFischler/samuraitornadoes">
+                <img src="github.png" width="75" height="110">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasic" class="navbar-menu">
+
+            <div class="navbar-start">
+
+                <a class="navbar-item" href="https://kristineskitchenblog.com/ground-beef-tacos/">
+                    Amanda
+                </a>
+                <a class="navbar-item" href="https://www.aspicyperspective.com/best-hamburger-patty-recipe/">
+                    Hector
+                </a>
+                <a class="navbar-item" href="https://www.tastingtable.com/736524/simple-baked-escargot-recipe/">
+                    Daniel
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+
+                        <a class="navbar-item"
+                            href="https://docs.google.com/presentation/d/1jhjAK9xhbrbANjguWM_au7fmLPiSwGnZAyiTrGpEaqA/edit#slide=id.g275ec614615_0_304">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">
+                            <strong> A website created by the Samurai Tornados.</strong>
+                        </a>
+
+
+
+
+
+
+
     </nav>
     <div class="container">
         <div class="generator">
@@ -41,7 +93,7 @@
                 <div class="buttons">
                     <button class="button is-primary is-outlined">Search Drinks</button>
 
-                  </div>
+                </div>
             </form>
             <div id="drinkList" class="result"></div>
             <div id="drinkDetails" class="result"></div>
