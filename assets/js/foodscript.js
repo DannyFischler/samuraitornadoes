@@ -51,7 +51,7 @@ async function fetchMealById(mealId) {
 
             mealDetails.innerHTML = `
                 <h2>${meal.strMeal}</h2>
-                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" style="width: 150px;">
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" style="width: 300px;">
                 <p>Category: ${meal.strCategory}</p>
                 <p>Ingredients: ${ingredients.join(", ")}</p>
                 <p>Instructions: ${meal.strInstructions}</p>

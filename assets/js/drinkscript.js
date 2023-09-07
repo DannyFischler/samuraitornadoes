@@ -47,7 +47,7 @@ async function fetchDrinkById(drinkId) {
 
             drinkDetails.innerHTML = `
         <h2>${drink.strDrink}</h2>
-        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}" style="width: 300px;">
         <p>Category: ${drink.strCategory}</p>
         <p>Ingredients: ${ingredients.join(", ")}</p>
         <p>Instructions: ${drink.strInstructions}</p>
