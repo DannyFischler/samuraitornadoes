@@ -6,27 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
     <title>Meal and Drink Search App</title>
 </head>
+<h1 class="is-size-2 has-text-success">
+    <bold> Tornado Recipe Picker </bold>
+</h1>
+<style>
+    .navbar {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
+</head>
 
-<body>
-    <div class="header">
-        <h1 class="title">Tornado Recipe Picker</h1>
+<body class="has-text-centered">
 
 
-    </div>
-    <nav class="navbar" role="navigation" aria-lable="main navigation">
+    <!-- Danger Background -->
+    <nav class="navbar is-danger">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://github.com/DannyFischler/samuraitornadoes">
-                <img src="github.png" width="75" height="110">
+                <img src="github.png">
             </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+            <div class="navbar-burger" data-target="navBackgroundDemo1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+
         <div id="navbarBasic" class="navbar-menu">
 
             <div class="navbar-start">
@@ -61,9 +71,12 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-light">
+                        <a class="button is-dark">
                             <strong> A website created by the Samurai Tornados.</strong>
                         </a>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -88,7 +101,8 @@
         <div class="generator">
             <h2>Drink Search</h2>
             <form id="drinkSearchForm">
-                <label for="drinkType">What would you like to drink? Ordinary Drink, Cocktail, Beer, or Shot?</label>
+                <label for="drinkType">What would you like to drink? Ordinary Drink, Cocktail, Beer, or
+                    Shot?</label>
                 <input type="text" id="drinkType" placeholder="Enter type of drink...">
                 <div class="buttons">
                     <button class="button is-primary is-outlined">Search Drinks</button>
