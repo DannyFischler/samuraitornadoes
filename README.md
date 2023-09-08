@@ -15,7 +15,7 @@ TheMealDB API
 TheCocktailDB API
 
 # Screenshot
-![Screenshot 2023-09-07 at 8 13 41 PM](https://github.com/DannyFischler/samuraitornadoes/assets/138410240/af6e9bbb-2f8c-4ffd-99b0-fc0d44483150)
+![Screenshot 2023-09-07 at 8 46 58 PM](https://github.com/DannyFischler/samuraitornadoes/assets/138410240/4985653c-521b-4b9c-8c0d-a237081a7737)
 
 # Deployed Page
 https://dannyfischler.github.io/samuraitornadoes/
