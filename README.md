@@ -1,4 +1,4 @@
-# samuraitornadoes
+# Samurai Tornadoes
 
 # Project Title
 Tornado Recipe Picker
@@ -10,13 +10,12 @@ Feeling indecisive about what to eat for dinner? Wanting to try a new cocktail? 
 As a user, I want a randomly selected food/beverage
 SO I do not have to think about what to make for dinner 
 
-# Wireframe
-
 # APIs Used
-www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
-www.themealdb.com/api/json/v1/1/lookup.php?i=52772
-www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
-www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=552
+TheMealDB API
+TheCocktailDB API
 
-# Breakdown of Tasks
+# Screenshot
+![Screenshot 2023-09-07 at 8 13 41 PM](https://github.com/DannyFischler/samuraitornadoes/assets/138410240/af6e9bbb-2f8c-4ffd-99b0-fc0d44483150)
 
+# Deployed Page
+https://dannyfischler.github.io/samuraitornadoes/
