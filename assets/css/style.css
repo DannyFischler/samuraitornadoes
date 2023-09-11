@@ -17,21 +17,22 @@ body {
 
 h1 {
     color: rgb(173, 3, 3);
-    font-family: 'Averia Serif Libre', sans-serif; 
+    font-family: 'Averia Serif Libre', sans-serif;
 }
 
 
 h2 {
     color: rgb(0, 0, 0);
     font-family: 'Averia Serif Libre', sans-serif;
-                                     
+
 }
 
 h3 {
     color: rgb(173, 3, 3);
-    font-family: 'Averia Serif Libre', sans-serif; 
- 
+    font-family: 'Averia Serif Libre', sans-serif;
+
 }
+
 /* 
 .generator {
     font-size: 500px;
@@ -135,6 +136,16 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
+#Daniel,
+#Amanda,
+#Hector,
+#More {
+    color: #612727;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
 a:hover {
     color: #0056b3;
     text-decoration: underline;
@@ -212,7 +223,7 @@ label {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #faf3f3;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -239,7 +250,7 @@ label {
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #fafafa;
     border-radius: 5px;
     margin-bottom: 10px;
 }

@@ -2,6 +2,24 @@ const mealSearchForm = document.getElementById("mealSearchForm");
 const ingredientInput = document.getElementById("ingredient");
 const mealsList = document.getElementById("mealList");
 const mealDetails = document.getElementById("mealDetails");
+const amandaItem = document.getElementById("Amanda");
+const dannyItem = document.getElementById("Daniel");
+const hectorItem = document.getElementById("Hector");
+
+amandaItem.addEventListener("click", event => {
+    event.preventDefault();
+    fetchMealById(52830);
+})
+
+dannyItem.addEventListener("click", event => {
+    event.preventDefault();
+    fetchMealById(52829);
+})
+
+hectorItem.addEventListener("click", event => {
+    event.preventDefault();
+    fetchMealById(53013);
+})
 
 mealSearchForm.addEventListener("submit", event => {
     event.preventDefault();

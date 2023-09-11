@@ -18,6 +18,7 @@ async function searchDrinksByType(drinkType) {
         const drinks = data.drinks;
 
         if (drinks) {
+            drinkList.innerHTML = ""; // Clear the message // Clear the message{
             const randomIndex = Math.floor(Math.random() * drinks.length);
             const randomDrinkId = drinks[randomIndex].idDrink;
             fetchDrinkById(randomDrinkId);
