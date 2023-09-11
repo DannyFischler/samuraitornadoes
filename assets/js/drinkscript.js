@@ -6,6 +6,9 @@ const drinkDetails = document.getElementById("drinkDetails");
 drinkSearchForm.addEventListener("submit", event => {
     event.preventDefault();
     const drinkType = drinkTypeInput.value.trim();
+
+    saveDrinkSearchToLocalStorage(drinkType);
+
     if (drinkType !== "") {
         searchDrinksByType(drinkType);
     }
@@ -60,4 +63,15 @@ async function fetchDrinkById(drinkId) {
         console.error("Error fetching drink details:", error);
         drinkDetails.innerHTML = "<p>Error fetching drink details.</p>";
     }
+}
+
+function getDrinkSearchesFromLocalStorage() {
+    const searches = localStorage.getItem('drinkHistory');
+    return searches ? JSON.parse(searches) : [];
+}
+
+function saveDrinkSearchToLocalStorage(drinkType) {
+    const searches = getDrinkSearchesFromLocalStorage();
+    searches.push(drinkType);
+    localStorage.setItem('drinkHistory', JSON.stringify(searches));
 }
