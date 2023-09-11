@@ -24,6 +24,9 @@ hectorItem.addEventListener("click", event => {
 mealSearchForm.addEventListener("submit", event => {
     event.preventDefault();
     const ingredient = ingredientInput.value.trim();
+
+    saveFoodSearchToLocalStorage(ingredient)
+
     if (ingredient !== "") {
         searchMealsByIngredient(ingredient);
     }
@@ -81,4 +84,15 @@ async function fetchMealById(mealId) {
         console.error("Error fetching meal details:", error);
         mealDetails.innerHTML = "<p>Error fetching meal details.</p>";
     }
+}
+
+function getFoodSearchesFromLocalStorage() {
+    const searches = localStorage.getItem('FoodHistory');
+    return searches ? JSON.parse(searches) : [];
+}
+
+function saveFoodSearchToLocalStorage(ingredient) {
+    const searches = getFoodSearchesFromLocalStorage();
+    searches.push(ingredient);
+    localStorage.setItem('FoodHistory', JSON.stringify(searches));
 }
