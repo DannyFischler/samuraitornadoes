@@ -67,12 +67,12 @@
                     Daniel
                 </a>
                 <div class="navbar-item has-dropdown is-hoverable">
+
                     <a class="navbar-link">
                         More
                     </a>
 
-                    <div class="navbar-dropdown">
-
+                    <div class="navbar-dropdown is-hidden">
                         <a class="navbar-item"
                             href="https://docs.google.com/presentation/d/1jhjAK9xhbrbANjguWM_au7fmLPiSwGnZAyiTrGpEaqA/edit#slide=id.g275ec614615_0_304">
                             About
@@ -139,6 +139,35 @@
                 <div id="drinkDetails" class="result"></div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // For the burger menu:
+                const burger = document.querySelector('.navbar-burger');
+                const navMenu = document.querySelector('#navbarBasic');
+
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('is-active');
+                    navMenu.classList.toggle('is-active');
+                });
+
+                // For the dropdowns:
+                const dropdowns = document.querySelectorAll('.navbar-item.has-dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('click', function (event) {
+                        // First close all active dropdowns:
+                        console.log("IS ACTIVE:" + this.querySelector('.navbar-dropdown').getAttribute("is-active"))
+                        console.log("IS HIDDEN:" + this.querySelector('.navbar-dropdown').getAttribute("is-hidden"))
+                        // this.querySelector('.navbar-dropdown').classList.toggle('is-active');
+                        // Then open the clicked one:
+                        this.querySelector('.navbar-dropdown').setAttribute("is-hidden", false);
+                        this.querySelector('.navbar-dropdown').classList.toggle('is-hidden');
+                        console.log("IS ACTIVE:" + this.querySelector('.navbar-dropdown').getAttribute("is-active"))
+                        console.log("IS HIDDEN:" + this.querySelector('.navbar-dropdown').getAttribute("is-hidden"))
+                    });
+                });
+            });
+        </script>
         <script src="assets/js/foodscript.js"></script>
         <script src="assets/js/drinkscript.js"></script>
 </body>
